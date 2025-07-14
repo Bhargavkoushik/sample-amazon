@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-in-page</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <form class="signin-form">
+        <h1>Sign In</h1>
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Sign In</button>
+        <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p class="forgot-password-link"><a href="forgot-password.html">Forgot Password?</a></p>
+        <p class="terms-link">By signing in, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+    </form>
+    <footer>
+        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.signin-form').addEventListener('submit', async function (e) {
+  e.preventDefault(); // prevent default form submission
+
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+
+  try {
+    const response = await fetch('http://localhost:8000/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+
+    if (response.ok) {
+      // Successful login
+      window.location.href = 'index.html';
+    } else {
+      // Login failed (wrong credentials)
+      alert("Invalid credentials. Please try again.");
+      document.querySelector('.signin-form').reset();
+    }
+
+  } catch (err) {
+    // Network/server error
+    alert("Error connecting to server. Please try again later.");
+    console.error(err);
+    document.querySelector('.signin-form').reset();
+  }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Product Grid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="product-grid">
+     <!-- Header -->
+  <header class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" /></a>
+    </div>
+    <div class="nav-delivery">
+      <a href="#"><span>Deliver to</span>
+      <br><strong>&nbsp;&nbsp;India</strong></a>
+    </div>
+
+    <div class="nav-search">
+        <select name="categories">
+            <option value="all" href="#">All</option>
+            <option value="books" href="#">Arts & Craft</option>
+            <option value="electronics" href="#">Automotive</option>
+            <option value="clothing" href="#">Baby</option>
+            <option value="toys" href="#">Books</option>
+            <option value="games" href="#">Computers</option>
+            <option value="home" href="#">Electronics</option>
+            <option value="grocery" href="#">Health & Household</option>
+            <option value="sports" href="#">Home & Kitchen</option>
+            <option value="beauty" href="#">Jewelry</option>
+            <option value="tools" href="#">Movies & TV</option>
+            <option value="music" href="#">Music</option>
+            <option value="outdoors" href="#">Pet Supplies</option>
+            <option value="software" href="#">Sports & Outdoors</option>
+            <option value="Boys Fashion" href="#">Boys Fashion</option>
+            <option value="Girls Fashion" href="#">Girls Fashion</option>
+        <input type="text" placeholder="Search Amazon" />
+        <button>🔍</button>
+    </div>
+    <div class="lang-dropdown">
+  <button class="lang-btn">
+    🇺🇸 EN ▾
+  </button>
+  <div class="lang-menu">
+    <p><strong>Change language</strong> <a href="#">Learn more</a></p>
+    <form>
+      <label><input type="radio" name="lang" checked /> English - EN</label>
+      <label><input type="radio" name="lang" /> español - ES</label>
+      <label><input type="radio" name="lang" /> العربية - AR</label>
+      <label><input type="radio" name="lang" /> Deutsch - DE</label>
+      <label><input type="radio" name="lang" /> עברית - HE</label>
+      <label><input type="radio" name="lang" /> 한국어 - KO</label>
+      <label><input type="radio" name="lang" /> português - PT</label>
+      <label><input type="radio" name="lang" /> 中文(简体) - ZH</label>
+      <label><input type="radio" name="lang" /> 中文(繁體) - ZH</label>
+    </form>
+    <hr />
+    <p><strong>Change currency</strong> <a href="#">Learn more</a></p>
+    <p>$ - USD - US Dollar <a href="#">Change</a></p>
+    <hr />
+    <p>🇺🇸 You are shopping on Amazon.com</p>
+    <p><a href="#">Change country/region.</a></p>
+  </div>
+</div>
+
+    <div class="nav-links">
+  <div class="dropdown">
+    <button class="dropbtn">Hello, sign in<br><strong>Account & Lists ▾</strong></button>
+    <div class="dropdown-content">
+      <div class="sign-in-section">
+        <button onclick="location.href='signin.html'" class="sign-in-btn">Sign in</button>
+        <div class="dropdown-content-text4">
+          <p>New customer? <a class="dropdown-content-link4" href="signup.html">Start here.</a></p>
+        </div>
+      </div>
+      <div class="dropdown-columns">
+        <div>
+          <h4>Your Lists</h4>
+          <a href="#">Create a List</a>
+          <a href="#">Find a List or Registry</a>
+        </div>
+        <div>
+          <h4>Your Account</h4>
+          <a href="#">Account</a>
+          <a href="#">Orders</a>
+          <a href="#">Recommendations</a>
+          <a href="#">Browsing History</a>
+          <a href="#">Watchlist</a>
+          <a href="#">Video Purchases & Rentals</a>
+          <a href="#">Kindle Unlimited</a>
+          <a href="#">Content & Devices</a>
+          <a href="#">Subscribe & Save Items</a>
+          <a href="#">Memberships & Subscriptions</a>
+          <a href="#">Music Library</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="nav-links">
+       <a href="#"> Returns <br> &nbsp;&nbsp;&nbsp;&nbsp; <strong>& Orders</strong></a>
+    </div>
+    <div class="nav-links">
+      <a href="#">Cart 🛒</a>
+    </div>
+  </header>
+  <!-- Sub-header -->
+<nav class="sub-header">
+  <ul>
+    <li id="menu-toggle"><i class="fas fa-bars"></i> All</li>
+    <li><a href="#">Today's Deals</a></li>
+    <li><a href="#">Registry</a></li>
+    <li><a href="#">Prime Video</a></li>
+    <li><a href="#">Gift Cards</a></li>
+    <li><a href="#">Customer Service</a></li>
+    <li><a href="#">Sell</a></li>
+  </ul>
+</nav>
+
+<!-- Side Menu Drawer -->
+<div id="side-menu" class="side-menu">
+  <span class="close-btn" id="close-btn">&times;</span>
+  <h3>All Categories</h3>
+  <ul>
+    <li><a href="#">Mobiles</a></li>
+    <li><a href="#">Electronics</a></li>
+    <li><a href="#">Fashion</a></li>
+    <li><a href="#">Home & Kitchen</a></li>
+    <li><a href="#">Books</a></li>
+    <li><a href="#">Toys</a></li>
+  </ul>
+</div>
+<div id="overlay" class="overlay"></div>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const sideMenu = document.getElementById('side-menu');
+  const closeBtn = document.getElementById('close-btn');
+  const overlay = document.getElementById('overlay');
+
+  menuToggle.onclick = () => {
+    sideMenu.style.left = '0';
+    overlay.style.display = 'block';
+  };
+
+  closeBtn.onclick = () => {
+    sideMenu.style.left = '-250px';
+    overlay.style.display = 'none';
+  };
+
+  overlay.onclick = () => {
+    sideMenu.style.left = '-250px';
+    overlay.style.display = 'none';
+  };
+</script>
+  <div class="product-container">
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61R8OgObRsL._AC_UL320_.jpg" alt="USB Mic">
+      <h3>Amazon Basics USB Condenser Microphone</h3>
+      <p class="price">2,304</p>
+      <p class="rating">⭐ 4.4 (316 reviews)</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71Re8OntVjL._AC_UL320_.jpg" alt="Nex Playground">
+      <h3>Nex Playground – Interactive Play System</h3>
+      <p class="price">21,408</p>
+      <p class="rating">⭐ 4.7 (1.6k reviews)</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/711kFKT+azL._AC_UL320_.jpg" alt="R40S Console">
+      <h3>R40S Pro Handheld Game Console (30000 Games)</h3>
+      <p class="price">8,799</p>
+      <p class="rating">⭐ 2.9 (38 reviews)</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71yl7YJUTKL._AC_UL320_.jpg" alt="Lenovo Webcam">
+      <h3>Frigidaire EFMIS179 Gaming Light Up Mini Beverage Refrigerator</h3>
+      <p class="price">4,607</p>
+      <p class="rating">⭐ 4.2 (13.6k reviews)</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71nvKD9L-iL._AC_UL320_.jpg" alt="R36MAX Console">
+      <h3>Roblox Digital Gift Card - 1,000 Robux</h3>
+      <p class="price">859</p>
+      <p class="rating">⭐ 4.2 (36 reviews)</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61WijJxynUL._AC_UL320_.jpg" alt="R40S Console">
+      <h3>R40S Pro Handheld Game Console (30000 Games)</h3>
+      <p class="price">9,999</p>
+      <p class="rating">⭐ 4.0 (1.2k reviews)</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/91we94LQPhL._AC_UL320_.jpg" alt="USB Mic">
+        <h3>Magnetic Dart Board - 12pcs Magnetic Darts - Excellent Indoor Game </h3>
+        <p class="price">899</p>
+        <p class="rating">⭐ 4.4 (316 reviews)</p>
+        <button>Add to cart</button>    
+    </div>
+  </div>
+</body>
+</html>

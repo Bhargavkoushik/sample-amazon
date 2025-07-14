@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product 2 - Amazon Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #fff; margin: 0; }
+    .navbar { display: flex; align-items: center; background: #232f3e; padding: 0.5rem 2vw; color: #fff; }
+    .nav-logo img { height: 40px; }
+    .nav-search { flex: 1; display: flex; align-items: center; margin: 0 2vw; }
+    .nav-search input { width: 100%; padding: 0.5rem 1rem; border: none; border-radius: 4px 0 0 4px; font-size: 1rem; }
+    .nav-search button { background: #ffd814; border: none; padding: 0.5rem 1rem; border-radius: 0 4px 4px 0; cursor: pointer; font-size: 1.1rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-link { color: #fff; text-decoration: none; font-size: 1rem; transition: color 0.2s; }
+    .nav-link:hover { color: #ffd814; }
+    .product-detail-container { max-width: 1200px; margin: 2rem auto; display: flex; gap: 2rem; padding: 0 2vw; }
+    .product-image-section { flex: 1; display: flex; align-items: flex-start; justify-content: center; }
+    .product-image-section img { width: 350px; max-width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); background: #fff; }
+    .product-info-section { flex: 2; display: flex; flex-direction: column; }
+    .product-title { font-size: 2rem; color: #232f3e; margin-bottom: 1rem; }
+    .product-price { font-size: 1.7rem; color: #b12704; margin-bottom: 1rem; }
+    .product-description { font-size: 1.1rem; color: #222; margin-bottom: 2rem; }
+    .add-to-cart-btn { background: #ffd814; color: #232f3e; border: none; border-radius: 6px; padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: bold; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: background 0.2s, transform 0.1s; }
+    .add-to-cart-btn:hover { background: #f7ca00; transform: scale(1.04); }
+    @media (max-width: 900px) { .product-detail-container { flex-direction: column; align-items: center; } .product-image-section { justify-content: center; } }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" /></a>
+    </div>
+    <form class="nav-search" onsubmit="return false;">
+      <input type="text" placeholder="Search Amazon..." />
+      <button>🔍</button>
+    </form>
+    <div class="nav-links">
+      <a href="#" class="nav-link">Account & Lists</a>
+      <a href="#" class="nav-link">Orders</a>
+      <a href="#" class="nav-link">Cart 🛒</a>
+    </div>
+  </header>
+  <main>
+    <div class="product-detail-container">
+      <div class="product-image-section">
+        <img src="https://m.media-amazon.com/images/I/81mVDJFRCgL._AC_SY200_.jpg" alt="Product 2" />
+      </div>
+      <div class="product-info-section">
+        <div class="product-title">Sample Product 2 Title</div>
+        <div class="product-price">₹1,799.00</div>
+        <div class="product-description">This is a sample description for Product 2. It is a high-quality item, perfect for your needs. Enjoy fast delivery and great service with Amazon.</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About Amazon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <ul>
+          <li><a href="#">Sell products</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Amazon Payment Products</h4>
+        <ul>
+          <li><a href="#">Amazon Business Card</a></li>
+          <li><a href="#">Shop with Points</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <ul>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2025, Amazon.com, Inc. or its affiliates</div>
+  </footer>
+</body>
+</html> 

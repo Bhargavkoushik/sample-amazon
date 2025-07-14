@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Home Arrivals - Amazon Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #fff; margin: 0; }
+    .navbar {
+      display: flex;
+      align-items: center;
+      background: #232f3e;
+      padding: 0.5rem 2vw;
+      color: #fff;
+      position: relative;
+    }
+    .back-arrow {
+      background: #fff;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-right: 1.2rem;
+      color: #232f3e;
+      border-radius: 50%;
+      width: 2.8rem;
+      height: 2.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+    }
+    .back-arrow:hover, .back-arrow:focus {
+      background: #ffd814;
+      color: #232f3e;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      outline: none;
+      transform: scale(1.08);
+    }
+    .nav-logo img { height: 40px; }
+    .nav-search {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin: 0 2vw;
+    }
+    .nav-search input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+    }
+    .nav-search button {
+      background: #ffd814;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #ffd814; }
+    .main-content {
+      max-width: 1200px;
+      margin: 2rem auto 0 auto;
+      padding: 0 2vw;
+    }
+    .category-section h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #232f3e;
+    }
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s, transform 0.15s;
+      border: 1px solid #f0f0f0;
+    }
+    .product-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+      transform: translateY(-4px) scale(1.03);
+      border-color: #ffd814;
+    }
+    .product-card img {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .product-card h3 {
+      font-size: 1.1rem;
+      color: #232f3e;
+      margin: 0.5rem 0 0.3rem 0;
+    }
+    .product-card p {
+      color: #555;
+      font-size: 0.97rem;
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+    }
+    .footer {
+      background: #232f3e;
+      color: #fff;
+      padding: 2rem 2vw 1rem 2vw;
+      margin-top: 3rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .footer-col {
+      min-width: 150px;
+    }
+    .footer-col h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+      color: #ffd814;
+    }
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-col ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.97rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: #ffd814; }
+    .footer-copy {
+      text-align: center;
+      color: #bbb;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 700px) {
+      .main-content { padding: 0 1vw; }
+      .footer-links { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <button class="back-arrow" onclick="window.history.back()" aria-label="Go back">&#8592;</button>
+    <div class="nav-logo">
+      <a href="index.html"><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" /></a>
+    </div>
+    <form class="nav-search" onsubmit="return false;">
+      <input type="text" placeholder="Search Home Arrivals..." />
+      <button>🔍</button>
+    </form>
+    <div class="nav-links">
+      <a href="#" class="nav-link">Account & Lists</a>
+      <a href="#" class="nav-link">Orders</a>
+      <a href="#" class="nav-link">Cart 🛒</a>
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="category-section">
+      <h1>New home arrivals under $50</h1>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_1x._SY116_CB555960040_.jpg" alt="Kitchen & Dining" />
+          <h3>Kitchen & Dining</h3>
+          <p>Latest kitchen and dining products for your home.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_1x._SY116_CB555960040_.jpg" alt="Home improvement" />
+          <h3>Home improvement</h3>
+          <p>Upgrade your home with new arrivals.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_1x._SY116_CB555960040_.jpg" alt="Decor" />
+          <h3>Decor</h3>
+          <p>Decorate your home with the latest decor items.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_1x._SY116_CB555960040_.jpg" alt="Bedding & Bath" />
+          <h3>Bedding & Bath</h3>
+          <p>Fresh bedding and bath essentials for your home.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About Amazon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <ul>
+          <li><a href="#">Sell products</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Amazon Payment Products</h4>
+        <ul>
+          <li><a href="#">Amazon Business Card</a></li>
+          <li><a href="#">Shop with Points</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <ul>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2025, Amazon.com, Inc. or its affiliates</div>
+  </footer>
+  <script>
+    // Cart functionality for category page
+    document.querySelectorAll('.add-to-cart-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const card = btn.closest('.product-card');
+        const img = card.querySelector('img').src;
+        const title = card.querySelector('h3').innerText;
+        const desc = card.querySelector('p').innerText;
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ image: img, title: title, desc: desc });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Added to cart!');
+      });
+    });
+    // Cart icon click
+    document.querySelectorAll('.nav-link, .nav-links a').forEach(function(link) {
+      if (link.innerText.includes('Cart')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.location.href = 'cart.html';
+        });
+      }
+    });
+  </script>
+</body>
+</html> 

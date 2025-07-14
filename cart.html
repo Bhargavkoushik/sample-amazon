@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - Amazon Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #fff; margin: 0; }
+    .navbar {
+      display: flex;
+      align-items: center;
+      background: #232f3e;
+      padding: 0.5rem 2vw;
+      color: #fff;
+      position: relative;
+    }
+    .nav-logo img { height: 40px; }
+    .nav-search {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin: 0 2vw;
+    }
+    .nav-search input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+    }
+    .nav-search button {
+      background: #ffd814;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #ffd814; }
+    .cart-main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2vw;
+      display: flex;
+      gap: 2rem;
+    }
+    .cart-left {
+      flex: 2;
+      min-width: 0;
+    }
+    .cart-title {
+      font-size: 2rem;
+      color: #232f3e;
+      margin-bottom: 1.5rem;
+    }
+    .cart-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .cart-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      background: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 1rem;
+    }
+    .cart-item img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 6px;
+      background: #fff;
+    }
+    .cart-item-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cart-item-title {
+      font-size: 1.2rem;
+      color: #232f3e;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .cart-item-desc {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .empty-cart {
+      text-align: center;
+      color: #888;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+    .continue-shopping {
+      color: #007185;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+    .cart-right {
+      flex: 1;
+      min-width: 260px;
+      max-width: 350px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.5rem 1.2rem;
+      height: fit-content;
+      margin-top: 2.5rem;
+    }
+    .cart-summary-title {
+      font-size: 1.1rem;
+      color: #232f3e;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .cart-summary-items {
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      color: #222;
+    }
+    .proceed-btn {
+      width: 100%;
+      background: #ffd814;
+      color: #232f3e;
+      border: none;
+      border-radius: 6px;
+      padding: 0.9rem 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 0.5rem;
+    }
+    .proceed-btn:hover {
+      background: #f7ca00;
+      transform: scale(1.03);
+    }
+    .delete-btn {
+      background: #fff;
+      color: #b12704;
+      border: 1px solid #b12704;
+      border-radius: 4px;
+      padding: 0.4rem 1.1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 0.7rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      margin-left: 0;
+      margin-bottom: 0.2rem;
+      display: inline-block;
+    }
+    .delete-btn:hover {
+      background: #b12704;
+      color: #fff;
+    }
+    @media (max-width: 900px) {
+      .cart-main { flex-direction: column; }
+      .cart-right { max-width: 100%; margin-top: 2rem; }
+    }
+    @media (max-width: 700px) {
+      .cart-item { flex-direction: column; align-items: center; }
+      .cart-item img { width: 80px; height: 80px; }
+      .cart-right { padding: 1rem 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" /></a>
+    </div>
+    <form class="nav-search" onsubmit="return false;">
+      <input type="text" placeholder="Search Amazon..." />
+      <button>🔍</button>
+    </form>
+    <div class="nav-links">
+      <a href="#" class="nav-link">Account & Lists</a>
+      <a href="#" class="nav-link">Orders</a>
+      <a href="#" class="nav-link">Cart 🛒</a>
+    </div>
+  </header>
+  <main class="cart-main">
+    <div class="cart-left">
+      <div class="cart-title">Shopping Cart</div>
+      <div class="cart-list" id="cart-list">
+        <!-- Cart items will be rendered here -->
+      </div>
+      <div class="empty-cart" id="empty-cart" style="display:none;">
+        Your cart is empty.<br>
+        <a href="index.html" class="continue-shopping">Continue shopping</a>
+      </div>
+    </div>
+    <div class="cart-right" id="cart-summary" style="display:none;">
+      <div class="cart-summary-title">Cart Summary</div>
+      <div class="cart-summary-items" id="cart-summary-items"></div>
+      <button class="proceed-btn">Proceed to Buy</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-links1">
+      <div class="footer-link-column1">
+        <p class="footer-link-title" style="font-weight: bold;">Get to Know Us</p>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About Amazon</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-column2">
+        <p class="footer-link-title" style="font-weight: bold;">Make Money with Us</p>
+        <ul>
+          <li><a href="#">Sell products on Amazon</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-column3">
+        <p class="footer-link-title" style="font-weight: bold;">Amazon Payment Products</p>
+        <ul>
+          <li><a href="#">Amazon Business Card</a></li>
+          <li><a href="#">Shop with Points</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-column4">
+        <p class="footer-link-title" style="font-weight: bold;">Let Us Help You</p>
+        <ul>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2025, Amazon.com, Inc. or its affiliates</div>
+  </footer>
+  <script>
+    // Render cart items from localStorage
+    function renderCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartList = document.getElementById('cart-list');
+      const emptyCart = document.getElementById('empty-cart');
+      const cartSummary = document.getElementById('cart-summary');
+      const cartSummaryItems = document.getElementById('cart-summary-items');
+      cartList.innerHTML = '';
+      if (cart.length === 0) {
+        emptyCart.style.display = 'block';
+        cartSummary.style.display = 'none';
+        return;
+      } else {
+        emptyCart.style.display = 'none';
+        cartSummary.style.display = 'block';
+      }
+      cart.forEach(function(item, idx) {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <img src="${item.image}" alt="${item.title}" />
+          <div class="cart-item-info">
+            <div class="cart-item-title">${item.title}</div>
+            <div class="cart-item-desc">${item.desc}</div>
+            <button class="delete-btn" data-idx="${idx}">Delete</button>
+          </div>
+        `;
+        cartList.appendChild(div);
+      });
+      cartSummaryItems.innerText = `Subtotal (${cart.length} item${cart.length > 1 ? 's' : ''})`;
+      // Add delete functionality
+      document.querySelectorAll('.delete-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const idx = parseInt(btn.getAttribute('data-idx'));
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          cart.splice(idx, 1);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          renderCart();
+        });
+      });
+    }
+    renderCart();
+    // Cart icon click (stay on cart page)
+    document.querySelectorAll('.nav-link, .nav-links a').forEach(function(link) {
+      if (link.innerText.includes('Cart')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.location.href = 'cart.html';
+        });
+      }
+    });
+    // Proceed to Buy button
+    document.querySelector('.proceed-btn').addEventListener('click', function() {
+      alert('Proceeding to checkout (demo only)');
+    });
+  </script>
+</body>
+</html> 

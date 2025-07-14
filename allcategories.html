@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Categories - Amazon Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .main-content { max-width: 900px; margin: 2rem auto; padding: 0 2vw; }
+    .all-title { font-size: 2rem; color: #232f3e; margin-bottom: 1.5rem; }
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .category-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s, transform 0.15s;
+      border: 1px solid #f0f0f0;
+      text-align: center;
+    }
+    .category-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+      transform: translateY(-4px) scale(1.03);
+      border-color: #ffd814;
+    }
+    .category-card img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .category-card-title {
+      font-size: 1.1rem;
+      color: #232f3e;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+    .category-card a {
+      color: #007185;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+    .category-card a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" /></a>
+    </div>
+    <form class="nav-search" onsubmit="return false;">
+      <input type="text" placeholder="Search Amazon..." />
+      <button>🔍</button>
+    </form>
+    <div class="nav-links">
+      <a href="#" class="nav-link">Account & Lists</a>
+      <a href="#" class="nav-link">Orders</a>
+      <a href="#" class="nav-link">Cart 🛒</a>
+    </div>
+  </header>
+  <main class="main-content">
+    <div class="all-title">All Categories</div>
+    <div class="categories-grid">
+      <div class="category-card">
+        <img src="https://m.media-amazon.com/images/I/71h15GsHkvL._SX3000_.jpg" alt="Mobiles" />
+        <div class="category-card-title">Mobiles</div>
+        <a href="#">Shop Mobiles</a>
+      </div>
+      <div class="category-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Smartphone_1x._SY116_CB566164844_.jpg" alt="Electronics" />
+        <div class="category-card-title">Electronics</div>
+        <a href="#">Shop Electronics</a>
+      </div>
+      <div class="category-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_1x._SY116_CB624172947_.jpg" alt="Fashion" />
+        <div class="category-card-title">Fashion</div>
+        <a href="fashion.html">Shop Fashion</a>
+      </div>
+      <div class="category-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_1x._SY116_CB563137408_.jpg" alt="Home & Kitchen" />
+        <div class="category-card-title">Home & Kitchen</div>
+        <a href="home.html">Shop Home & Kitchen</a>
+      </div>
+      <div class="category-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg" alt="Books" />
+        <div class="category-card-title">Books</div>
+        <a href="#">Shop Books</a>
+      </div>
+      <div class="category-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg" alt="Toys" />
+        <div class="category-card-title">Toys</div>
+        <a href="toys.html">Shop Toys</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-links1">
+      <div class="footer-link-column1">
+        <p class="footer-link-title" style="font-weight: bold;">Get to Know Us</p>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About Amazon</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-column2">
+        <p class="footer-link-title" style="font-weight: bold;">Make Money with Us</p>
+        <ul>
+          <li><a href="#">Sell products on Amazon</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-column3">
+        <p class="footer-link-title" style="font-weight: bold;">Amazon Payment Products</p>
+        <ul>
+          <li><a href="#">Amazon Business Card</a></li>
+          <li><a href="#">Shop with Points</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-column4">
+        <p class="footer-link-title" style="font-weight: bold;">Let Us Help You</p>
+        <ul>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2025, Amazon.com, Inc. or its affiliates</div>
+  </footer>
+</body>
+</html> 
