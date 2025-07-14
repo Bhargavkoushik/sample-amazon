@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amazon Clone</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
 
@@ -70,9 +70,9 @@
     <button class="dropbtn">Hello, sign in<br><strong>Account & Lists ▾</strong></button>
     <div class="dropdown-content">
       <div class="sign-in-section">
-        <button onclick="location.href='signin.html'" class="sign-in-btn">Sign in</button>
+        <button onclick="location.href='auth/signin.html'" class="sign-in-btn">Sign in</button>
         <div class="dropdown-content-text4">
-          <p>New customer? <a class="dropdown-content-link4" href="signup.html">Start here.</a></p>
+          <p>New customer? <a class="dropdown-content-link4" href="auth/signup.html">Start here.</a></p>
         </div>
       </div>
       <div class="dropdown-columns">
@@ -104,19 +104,19 @@
        <a href="#"> Returns <br> &nbsp;&nbsp;&nbsp;&nbsp; <strong>& Orders</strong></a>
     </div>
     <div class="nav-links">
-      <a href="#">Cart 🛒</a>
+      <a href="pages/cart.html">Cart 🛒</a>
     </div>
   </header>
   <!-- Sub-header -->
 <nav class="sub-header">
   <ul>
-    <li id="menu-toggle"><a href="allcategories.html"><i class="fas fa-bars"></i> All</a></li>
-    <li><a href="deals.html">Today's Deals</a></li>
-    <li><a href="registry.html">Registry</a></li>
-    <li><a href="primevideo.html">Prime Video</a></li>
-    <li><a href="giftcards.html">Gift Cards</a></li>
-    <li><a href="customerservice.html">Customer Service</a></li>
-    <li><a href="sell.html">Sell</a></li>
+    <li id="menu-toggle"><a href="pages/allcategories.html"><i class="fas fa-bars"></i> All</a></li>
+    <li><a href="pages/deals.html">Today's Deals</a></li>
+    <li><a href="pages/registry.html">Registry</a></li>
+    <li><a href="pages/primevideo.html">Prime Video</a></li>
+    <li><a href="pages/giftcards.html">Gift Cards</a></li>
+    <li><a href="pages/customerservice.html">Customer Service</a></li>
+    <li><a href="pages/sell.html">Sell</a></li>
   </ul>
 </nav>
 
@@ -127,10 +127,10 @@
   <ul>
     <li><a href="#">Mobiles</a></li>
     <li><a href="#">Electronics</a></li>
-    <li><a href="fashion.html">Fashion</a></li>
-    <li><a href="home.html">Home & Kitchen</a></li>
+    <li><a href="pages/fashion.html">Fashion</a></li>
+    <li><a href="pages/home.html">Home & Kitchen</a></li>
     <li><a href="#">Books</a></li>
-    <li><a href="toys.html">Toys</a></li>
+    <li><a href="pages/toys.html">Toys</a></li>
   </ul>
 </div>
 <div id="overlay" class="overlay"></div>
@@ -188,10 +188,10 @@
   <div class="category-card">
     <h1>Get your game on</h1>
   <div class="sub-images">
-    <a href="gaming.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg" alt="Gaming PC" class="main-img"></a>
+    <a href="pages/gaming.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg" alt="Gaming PC" class="main-img"></a>
   </div>  
     <div class="footer-link">
-      <a href="gaming.html">Shop gaming</a>
+      <a href="pages/gaming.html">Shop gaming</a>
     </div>
   </div>
 
@@ -199,21 +199,21 @@
   <div class="category-card">
     <h1>Top categories in Kitchen appliances</h1>
     <div class="sub-images">
-      <a href="kitchen.html" class="sub-image-link"><img src="https://m.media-amazon.com/images/I/313wAT6Iy2L._SY160_.jpg" alt="Cooker" class="main-img">
+      <a href="pages/kitchen.html" class="sub-image-link"><img src="https://m.media-amazon.com/images/I/313wAT6Iy2L._SY160_.jpg" alt="Cooker" class="main-img">
       <p>Cooker</p></a>
     </div>
     <div class="sub-images">
       <div>
-        <a href="kitchen.html" class="sub-image-link"><img src="https://m.media-amazon.com/images/I/21W7-lndINL._SY75_.jpg" alt="Coffee">
+        <a href="pages/kitchen.html" class="sub-image-link"><img src="https://m.media-amazon.com/images/I/21W7-lndINL._SY75_.jpg" alt="Coffee">
         <p>Coffee</p></a>
       </div>
       <div>
-        <a href="kitchen.html" class="sub-image-link"><img src="https://m.media-amazon.com/images/I/21B-NkA9p-L._SY75_.jpg" alt="Pots and Pans">
+        <a href="pages/kitchen.html" class="sub-image-link"><img src="https://m.media-amazon.com/images/I/21B-NkA9p-L._SY75_.jpg" alt="Pots and Pans">
         <p>Pots and Pans</p></a>
       </div>
     </div>
     <div class="footer-link">
-      <a href="kitchen.html">Explore all products in Kitchen</a>
+      <a href="pages/kitchen.html">Explore all products in Kitchen</a>
     </div>
   </div>
 
@@ -222,24 +222,24 @@
     <h1>Shop for your home essentials</h1>
     <div class="sub-images">
       <div>
-        <a href="home.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_1x._SY116_CB563137408_.jpg" alt="Cleaning Tools">
+        <a href="pages/home.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_1x._SY116_CB563137408_.jpg" alt="Cleaning Tools">
         <p>Cleaning Tools</p></a>
       </div>
       <div>
-        <a href="home.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeStorage_1x._SY116_CB563137408_.jpg" alt="Home Storage">
+        <a href="pages/home.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeStorage_1x._SY116_CB563137408_.jpg" alt="Home Storage">
         <p>Home Storage</p></a>
       </div>
       <div>
-        <a href="home.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_1x._SY116_CB563137408_.jpg" alt="Home Decor">
+        <a href="pages/home.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_1x._SY116_CB563137408_.jpg" alt="Home Decor">
         <p>Home Decor</p></a>
       </div>
       <div>
-        <a href="home.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/Bedding_1x._SY116_CB563137408_.jpg" alt="Bedding">
+        <a href="pages/home.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/Bedding_1x._SY116_CB563137408_.jpg" alt="Bedding">
         <p>Bedding</p></a>
       </div>
     </div>
     <div class="footer-link">
-      <a href="home.html">Discover more in Home</a>
+      <a href="pages/home.html">Discover more in Home</a>
     </div>
   </div>
 
@@ -248,24 +248,24 @@
     <h1>Shop Fashion for less</h1>
     <div class="sub-images">
       <div>
-        <a href="fashion.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_1x._SY116_CB624172947_.jpg" alt="Jeans">
+        <a href="pages/fashion.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_1x._SY116_CB624172947_.jpg" alt="Jeans">
         <p>Jeans under $50</p></a>
       </div>
       <div>
-        <a href="fashion.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_TOPS_1x._SY116_CB623353881_.jpg" alt="Tops">
+        <a href="pages/fashion.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_TOPS_1x._SY116_CB623353881_.jpg" alt="Tops">
         <p>Tops under $25</p></a>
       </div>
       <div>
-        <a href="fashion.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_DRESSES_1x._SY116_CB623353881_.jpg" alt="Dresses">
+        <a href="pages/fashion.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_DRESSES_1x._SY116_CB623353881_.jpg" alt="Dresses">
         <p>Dresses under $30</p></a>
       </div>
       <div>
-        <a href="fashion.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_SHOES_1x._SY116_CB624172947_.jpg" alt="Shoes">
+        <a href="pages/fashion.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_SHOES_1x._SY116_CB624172947_.jpg" alt="Shoes">
         <p>Shoes under $50</p></a>
       </div>
     </div>
     <div class="footer-link">
-      <a href="fashion.html">See all deals</a>
+      <a href="pages/fashion.html">See all deals</a>
     </div>
   </div>
   <!-- Section4 -->
@@ -273,34 +273,34 @@
     <h1>New home arrivals under $50</h1>
     <div class="sub-images">
       <div>
-        <a href="homearrivals.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_1x._SY116_CB555960040_.jpg" alt="Kitchen & Dining" class="main-img">
+        <a href="pages/homearrivals.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_1x._SY116_CB555960040_.jpg" alt="Kitchen & Dining" class="main-img">
         <p>Kitchen & Dining</p></a>
       </div>
       <div>
-        <a href="homearrivals.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_1x._SY116_CB555960040_.jpg" alt="Home improvement" class="main-img">
+        <a href="pages/homearrivals.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_1x._SY116_CB555960040_.jpg" alt="Home improvement" class="main-img">
         <p>Home improvement</p></a>
       </div>
       <div>
-        <a href="homearrivals.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_1x._SY116_CB555960040_.jpg" alt="Decor" class="main-img">
+        <a href="pages/homearrivals.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_1x._SY116_CB555960040_.jpg" alt="Decor" class="main-img">
         <p>Decor</p></a>
       </div>
       <div>
-        <a href="homearrivals.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_1x._SY116_CB555960040_.jpg" alt="Bedding & Bath" class="main-img">
+        <a href="pages/homearrivals.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_1x._SY116_CB555960040_.jpg" alt="Bedding & Bath" class="main-img">
         <p>Bedding & Bath</p></a>
       </div>
     </div>
     <div class="footer-link">
-      <a href="homearrivals.html">Shop the latest from home</a>
+      <a href="pages/homearrivals.html">Shop the latest from home</a>
     </div>
 </div>
 <!-- Section5 -->
 <div class="category-card">
   <h1>Toys under $25</h1>
   <div class="sub-images">
-    <a href="toys.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg" alt="Toys" class="main-img"></a>
+    <a href="pages/toys.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg" alt="Toys" class="main-img"></a>
   </div>  
     <div class="footer-link">
-      <a href="toys.html">Shop now</a>
+      <a href="pages/toys.html">Shop now</a>
     </div>
   </div>
 <!-- Section6 -->
@@ -308,24 +308,24 @@
   <h1>Wireless Tech</h1>
   <div class="sub-images">
     <div>
-      <a href="wireless.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Smartphone_1x._SY116_CB566164844_.jpg" alt="Smartphones" class="main-img">
+      <a href="pages/wireless.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Smartphone_1x._SY116_CB566164844_.jpg" alt="Smartphones" class="main-img">
       <p>Smartphones</p></a>
     </div>
     <div>
-      <a href="wireless.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Headphone_1x._SY116_CB566164844_.jpg" alt="Headphones" class="main-img">
+      <a href="pages/wireless.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Headphone_1x._SY116_CB566164844_.jpg" alt="Headphones" class="main-img">
       <p>Headphones</p></a>
     </div>
     <div>
-      <a href="wireless.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Watches_1x._SY116_CB566164844_.jpg" alt="Watches" class="main-img">
+      <a href="pages/wireless.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Watches_1x._SY116_CB566164844_.jpg" alt="Watches" class="main-img">
       <p>Watches</p></a>
     </div>
     <div>
-      <a href="wireless.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Tablet_1x._SY116_CB566164844_.jpg" alt="Tablets" class="main-img">
+      <a href="pages/wireless.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Aug/Tablet_1x._SY116_CB566164844_.jpg" alt="Tablets" class="main-img">
       <p>Tablets</p></a>
     </div>
   </div>
     <div class="footer-link">
-      <a href="wireless.html">Explore all wireless tech</a>
+      <a href="pages/wireless.html">Explore all wireless tech</a>
     </div>
 </div>
 <!-- Section7 -->
@@ -333,24 +333,24 @@
     <h1>Level up your beauty routine</h1>
     <div class="sub-images">
       <div>
-        <a href="beauty.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Make-up._SY116_CB558654384_.jpg" alt="Fuji_BTF_Quad_Cards_1x_Make-up" class="main-img">
+        <a href="pages/beauty.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Make-up._SY116_CB558654384_.jpg" alt="Fuji_BTF_Quad_Cards_1x_Make-up" class="main-img">
         <p>Make-Up</p></a>
       </div>
       <div>
-        <a href="beauty.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Brushes._SY116_CB558654384_.jpg" alt="Brushes" class="main-img">
+        <a href="pages/beauty.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Brushes._SY116_CB558654384_.jpg" alt="Brushes" class="main-img">
         <p>Brushes</p></a>
       </div>
       <div>
-        <a href="beauty.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Sponges._SY116_CB558654384_.jpg" alt="Sponges" class="main-img">
+        <a href="pages/beauty.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Sponges._SY116_CB558654384_.jpg" alt="Sponges" class="main-img">
         <p>Sponges</p></a>
       </div>
       <div>
-        <a href="beauty.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Mirrors._SY116_CB558654384_.jpg" alt="Mirrors" class="main-img">
+        <a href="pages/beauty.html" class="sub-image-link"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/DskBTFQuadCards/Fuji_BTF_Quad_Cards_1x_Mirrors._SY116_CB558654384_.jpg" alt="Mirrors" class="main-img">
         <p>Mirrors</p></a>
       </div>
     </div>
     <div class="footer-link">
-      <a href="beauty.html">Shop all beauty</a>
+      <a href="pages/beauty.html">Shop all beauty</a>
     </div>
   </div>
 </section>
@@ -363,34 +363,34 @@
   <div class="scroll-container">
     <div class="scroll-row">
       <div class="scroll-item">
-        <a href="product1.html"><img src="https://m.media-amazon.com/images/I/61nHUVwR65L._AC_SY200_.jpg" alt="Product 1"></a>
+        <a href="pages/product1.html"><img src="https://m.media-amazon.com/images/I/61nHUVwR65L._AC_SY200_.jpg" alt="Product 1"></a>
       </div>
       <div class="scroll-item">
-        <a href="product2.html"><img src="https://m.media-amazon.com/images/I/81mVDJFRCgL._AC_SY200_.jpg" alt="Product 2"></a>
+        <a href="pages/product2.html"><img src="https://m.media-amazon.com/images/I/81mVDJFRCgL._AC_SY200_.jpg" alt="Product 2"></a>
       </div>
       <div class="scroll-item">
-        <a href="product3.html"><img src="https://m.media-amazon.com/images/I/81mM1kVBspL._AC_SY200_.jpg" alt="Product 3"></a>
+        <a href="pages/product3.html"><img src="https://m.media-amazon.com/images/I/81mM1kVBspL._AC_SY200_.jpg" alt="Product 3"></a>
       </div>
       <div class="scroll-item">
-        <a href="product4.html"><img src="https://m.media-amazon.com/images/I/61+57vZJzBL._AC_SY200_.jpg" alt="Product 4"></a>
+        <a href="pages/product4.html"><img src="https://m.media-amazon.com/images/I/61+57vZJzBL._AC_SY200_.jpg" alt="Product 4"></a>
       </div>
       <div class="scroll-item">
-        <a href="product5.html"><img src="https://m.media-amazon.com/images/I/71awdfI+saL._AC_SY200_.jpg" alt="Product 5"></a>
+        <a href="pages/product5.html"><img src="https://m.media-amazon.com/images/I/71awdfI+saL._AC_SY200_.jpg" alt="Product 5"></a>
       </div>
       <div class="scroll-item">
-        <a href="product6.html"><img src="https://m.media-amazon.com/images/I/71FTVwOIANL._AC_SY200_.jpg" alt="Product 6"></a>
+        <a href="pages/product6.html"><img src="https://m.media-amazon.com/images/I/71FTVwOIANL._AC_SY200_.jpg" alt="Product 6"></a>
       </div>
       <div class="scroll-item">
-        <a href="product7.html"><img src="https://m.media-amazon.com/images/I/71+8uTMDRFL._AC_SY200_.jpg" alt="Product 7"></a>
+        <a href="pages/product7.html"><img src="https://m.media-amazon.com/images/I/71+8uTMDRFL._AC_SY200_.jpg" alt="Product 7"></a>
       </div>
       <div class="scroll-item">
-        <a href="product8.html"><img src="https://m.media-amazon.com/images/I/51pXMHqxwyL._AC_SY200_.jpg" alt="Product 8"></a>
+        <a href="pages/product8.html"><img src="https://m.media-amazon.com/images/I/51pXMHqxwyL._AC_SY200_.jpg" alt="Product 8"></a>
       </div>
       <div class="scroll-item">
-        <a href="product9.html"><img src="https://m.media-amazon.com/images/I/71sYrA1b66L._AC_SY200_.jpg" alt="Product 9"></a>
+        <a href="pages/product9.html"><img src="https://m.media-amazon.com/images/I/71sYrA1b66L._AC_SY200_.jpg" alt="Product 9"></a>
       </div>
       <div class="scroll-item">
-        <a href="product10.html"><img src="https://m.media-amazon.com/images/I/71YA10zJsFL._AC_SY200_.jpg" alt="Product 10"></a>
+        <a href="pages/product10.html"><img src="https://m.media-amazon.com/images/I/71YA10zJsFL._AC_SY200_.jpg" alt="Product 10"></a>
       </div>
     </div>
   </div>
@@ -403,10 +403,10 @@
       <h2 class="recommendation-card-heading"><span class="title-r">See personalized recommendations</span></h2>
     </div>
     <div class="recommendation-card-signup-button">
-      <button onclick="location.href='signin.html'" class="recommendation-card-button">Sign in</button>
+      <button onclick="location.href='auth/signin.html'" class="recommendation-card-button">Sign in</button>
     </div>
     <div class="recommendation-card">
-      <p class="recommendation-card-text">New customer? <a href="signup.html">Sign Up</a></p>
+      <p class="recommendation-card-text">New customer? <a href="auth/signup.html">Sign Up</a></p>
     </div>
   </div> 
 </section>
